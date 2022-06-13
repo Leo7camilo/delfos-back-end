@@ -1,11 +1,11 @@
-CREATE TABLE delfosapi.`permission` (
+CREATE TABLE `permission` (
   `id` bigint NOT NULL,
   `description` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
-CREATE TABLE delfosapi.`user` (
+CREATE TABLE `user` (
   `id` bigint NOT NULL,
   `cep` varchar(8) NOT NULL,
   `creation_date` date NOT NULL,
@@ -20,12 +20,12 @@ CREATE TABLE delfosapi.`user` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-INSERT INTO delfosapi.user (id, cep, creation_date, document_type, email, name, state, type, updated_date, document_number, password) VALUES
+INSERT INTO user (id, cep, creation_date, document_type, email, name, state, type, updated_date, document_number, password) VALUES
 (1, 14821208, '2022-04-11', 1, 'leonardo@gmail.com', 'Leonardo Cardoso Camilo', 'ATIVO', 'COMMUNAL', '2022-04-11', '47579950839', '$2a$10$X607ZPhQ4EgGNaYKt3n4SONjIv9zc.VMWdEuhCuba7oLAL5IvcL5.');
 
-ALTER TABLE delfosapi.user MODIFY id bigint NOT NULL AUTO_INCREMENT;
+ALTER TABLE user MODIFY id bigint NOT NULL AUTO_INCREMENT;
 
-CREATE TABLE delfosapi.`user_permission` (
+CREATE TABLE `user_permission` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `id_permission` int DEFAULT NULL,
   `id_user` bigint DEFAULT NULL,
@@ -35,7 +35,7 @@ CREATE TABLE delfosapi.`user_permission` (
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
-CREATE TABLE delfosapi.`bill` (
+CREATE TABLE `bill` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `cash_value` decimal(19,2) DEFAULT NULL,
   `date` date DEFAULT NULL,
@@ -48,7 +48,7 @@ CREATE TABLE delfosapi.`bill` (
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
-CREATE TABLE delfosapi.`flag` (
+CREATE TABLE `flag` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `description` varchar(255) DEFAULT NULL,
   `type` varchar(255) DEFAULT NULL,
@@ -56,7 +56,7 @@ CREATE TABLE delfosapi.`flag` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
-CREATE TABLE delfosapi.`tip` (
+CREATE TABLE `tip` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `value` varchar(255) DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,

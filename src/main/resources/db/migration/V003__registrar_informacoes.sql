@@ -1,4 +1,4 @@
-insert into delfosapi.flag
+insert into flag
 (type, description)
 values
 ('Bandeira verde', 'Condições favoráveis de geração de energia. A tarifa não sofre nenhum acréscimo'),
@@ -7,7 +7,7 @@ values
 ('Bandeira vermelha - Patamar 2','condições ainda mais custosas de geração. A tarifa sofre acréscimo de R$ 0,09492 para cada quilowatt-hora kWh consumido');
 
 
-insert into  delfosapi.tip
+insert into  tip
 (value, title)
 values
 ('Banhos fora do horário de pico', 'Banho'),
@@ -17,7 +17,7 @@ values
 
 
 
-insert into delfosapi.bill
+insert into bill
 (cash_value, date, kvw_value, type, user_id)
 values
 ('7.1', '2022-06-01', 7.1, 'ENERGIA', 1),
