@@ -1,6 +1,4 @@
 spring:
-  profiles:
-    active: prod
   jpa:    
     hibernate:
       ddl-auto: update
@@ -11,9 +9,9 @@ spring:
     show-sql: true
     
   datasource:
-    url: jdbc:mysql://localhost:3306/delfosapi?characterEncoding=UTF-8&useLegacyDatetimeCode=true&createDatabaseIfNotExist=true&useTimezone=true&serverTimezone=UTC
-    username: root
-    password: 1234
+    url: {JDBC_DATABASE_URL}
+    username: {JDBC_DATABASE_USERNAME}
+    password: {JDBC_DATABASE_PASSWORD}
     
   jackson:
     deserialization:
@@ -28,7 +26,12 @@ api:
   version: v1
   via:
     cep: https://viacep.com.br/ws/
-    
+
+delfos:
+  seguranca:
+    enable-https: true
+  origin-permitida: https://delfos-ui.herokuapp.com/
+
     
 #delfos:
 #  seguranca:
