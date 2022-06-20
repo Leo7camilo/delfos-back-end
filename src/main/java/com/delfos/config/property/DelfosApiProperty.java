@@ -7,7 +7,7 @@ import java.util.List;
 @ConfigurationProperties("delfos")
 public class DelfosApiProperty {
 
-	private String originPermitida = "https://delfos-ui.herokuapp.com";
+	private String originPermitida = "http://localhost:8000";
 
 	private final Seguranca seguranca = new Seguranca();
 
