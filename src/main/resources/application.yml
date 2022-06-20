@@ -30,7 +30,7 @@ api:
 delfos:
   seguranca:
     enable-https: true
-  origin-permitida: https://delfos-ui.herokuapp.com/
+  origin-permitida: https://delfos-ui.herokuapp.com
 
     
 #delfos:
