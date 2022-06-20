@@ -10,7 +10,7 @@ import com.delfos.model.User;
 
 public interface UserRepository extends JpaRepository<User, Long>, JpaSpecificationExecutor<User>{
 
-	List<Optional<User>> findByEmail(String email);
+	Optional<User> findByEmail(String email);
 
 	Optional<User> findByName(String name);
 
